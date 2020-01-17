@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Band-Tracker</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">NightClub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Check Status" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="title">
+        <h1 class="topTitle">The NightClub</h1>
+    </div>
+    <div class="form-container">
+        <form class="bandForm">
+            <label for="bandName">Band Name: </label>
+            <input type="text" name="bandName" class="bandName" placeholder="name here">
+            <label for='bandBio'>Band Bio:</label>
+            <textarea name="bandBio" class="bandBio" placeholder="Bio Here"></textarea>
+            <label for="bandGenre">Band Genre:</label>
+            <select name="bandGenre" id="bandGenre" class="form-control">
+                <option value="pleaseSelect" disabled selected value>--Please select an option--</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+                <option value="blues">Blues</option>
+                <option value="avant garde">Avant Garde</option>
+                <option value="country">Country</option>
+            </select>
+            <button type="button" class="bandSubmit btn btn-outline-light my-2 my-sm-0" id="submitBand">Submit</button>
+            <button type="button" class="bandNum btn btn-outline-light my-2 my-sm-0" id="bandNum">Get Your Number!</button>
+            <h6 class="numberText">Your Number.....</h6>
+            <div class="urNumber">
+                
+            </div>
+        </form>
+    </div>
     <script type="module" src="main.js"></script>
 </body>
+
 </html>
